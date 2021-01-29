@@ -148,6 +148,8 @@ dependencies {
     implementation "com.google.protobuf:protobuf-java:3.14.0"
     implementation "com.google.protobuf.nano:protobuf-javanano:3.1.0"
 
+    implementation fileTree(dir: "quickstep/libs", include: 'sysui_shared.jar')
+
     implementation "androidx.dynamicanimation:dynamicanimation:${ANDROID_X_VERSION}"
     implementation "androidx.recyclerview:recyclerview:${ANDROID_X_VERSION}"
     implementation "androidx.preference:preference:${ANDROID_X_VERSION}"

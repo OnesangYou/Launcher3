@@ -145,6 +145,9 @@ allprojects {
 }
 
 dependencies {
+    implementation "com.google.protobuf:protobuf-java:3.14.0"
+    implementation "com.google.protobuf.nano:protobuf-javanano:3.1.0"
+
     implementation "androidx.dynamicanimation:dynamicanimation:${ANDROID_X_VERSION}"
     implementation "androidx.recyclerview:recyclerview:${ANDROID_X_VERSION}"
     implementation "androidx.preference:preference:${ANDROID_X_VERSION}"
@@ -176,7 +179,7 @@ protobuf {
         generateProtoTasks {
             all().each { task ->
                 task.builtins {
-                    remove java
+                    java {}
                     javanano {
                         option "java_package=launcher_log_extension.proto|com.android.launcher3.userevent.nano"
                         option "java_package=launcher_log.proto|com.android.launcher3.userevent.nano"
